@@ -16,8 +16,8 @@ const cardData = [
   {
     img:
       'https://res.cloudinary.com/dgqdvqyz3/image/upload/v1530115666/trello_multiboard_example_u6in6u.gif',
-    title: 'Example: cooming soon',
-    link: '#'
+    title: 'Example',
+    link: 'https://multiboardfortrello.com/example'
   }
 ]
 
