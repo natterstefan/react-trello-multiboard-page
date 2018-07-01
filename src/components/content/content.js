@@ -7,20 +7,21 @@ import GridListTileBar from '@material-ui/core/GridListTileBar'
 import cardData from './data'
 
 const styles = theme => ({
-  root: {
+  page: {
+    margin: '30px 5px 0',
+    backgroundColor: theme.palette.background.paper,
+    paddingBottom: 100,
+  },
+  grid: {
     display: 'flex',
     flexWrap: 'wrap',
-    margin: '30px 5px',
     justifyContent: 'space-around',
     overflow: 'hidden',
-    backgroundColor: theme.palette.background.paper
   },
   gridList: {
     cursor: 'pointer',
     width: 500,
     height: 'auto',
-    // Promote the list into his own layer on Chrome. This cost memory but helps keeping high FPS.
-    transform: 'translateZ(0)'
   },
   titleBar: {
     background:
@@ -48,29 +49,31 @@ function AdvancedGridList(props) {
   const { classes } = props
 
   return (
-    <div className={classes.root}>
-      <GridList cellHeight={200} spacing={1} className={classes.gridList}>
-        {cardData.map((tile, idx) => (
-          <GridListTile
-            key={tile.img}
-            cols={tile.featured ? 2 : 1}
-            rows={tile.featured ? 2 : 1}
-            onClick={() => (window.location = tile.link)}
-          >
-            <img
-              className={(idx + 1) % 2 === 0 ? classes.imgY : classes.imgX}
-              src={tile.img}
-              alt={idx}
-            />
-            <GridListTileBar
-              title={tile.title}
-              titlePosition="top"
-              actionPosition="left"
-              className={classes.titleBar}
-            />
-          </GridListTile>
-        ))}
-      </GridList>
+    <div className={classes.page}>
+      <div className={classes.grid}>
+        <GridList cellHeight={200} spacing={1} className={classes.gridList}>
+          {cardData.map((tile, idx) => (
+            <GridListTile
+              key={tile.img}
+              cols={tile.featured ? 2 : 1}
+              rows={tile.featured ? 2 : 1}
+              onClick={() => (window.location = tile.link)}
+            >
+              <img
+                className={(idx + 1) % 2 === 0 ? classes.imgY : classes.imgX}
+                src={tile.img}
+                alt={idx}
+              />
+              <GridListTileBar
+                title={tile.title}
+                titlePosition="top"
+                actionPosition="left"
+                className={classes.titleBar}
+              />
+            </GridListTile>
+          ))}
+        </GridList>
+      </div>
     </div>
   )
 }

@@ -1,5 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import Link from 'gatsby-link'
 import { withStyles } from '@material-ui/core/styles'
 import AppBar from '@material-ui/core/AppBar'
 import Toolbar from '@material-ui/core/Toolbar'
@@ -7,7 +8,11 @@ import Typography from '@material-ui/core/Typography'
 
 const styles = {
   root: {
-    flexGrow: 1
+    flexGrow: 1,
+    '& a': {
+      textDecoration: 'none',
+      color: '#fff'
+    }
   },
   flex: {
     flex: 1
@@ -20,9 +25,15 @@ function ButtonAppBar(props) {
     <div className={classes.root}>
       <AppBar position="static">
         <Toolbar>
-          <Typography variant="title" color="inherit" className={classes.flex}>
-            Multiboard for Trello®
-          </Typography>
+          <Link to="/">
+            <Typography
+              variant="title"
+              color="inherit"
+              className={classes.flex}
+            >
+              Multiboard for Trello®
+            </Typography>
+          </Link>
         </Toolbar>
       </AppBar>
     </div>

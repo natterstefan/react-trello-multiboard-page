@@ -1,8 +1,8 @@
 import React from 'react'
 import { graphql } from 'gatsby'
-import Helmet from 'react-helmet'
 import get from 'lodash.get'
 
+import Header from '../components/header/header'
 import AppBar from '../components/app-bar/app-bar'
 import Content from '../components/content/content'
 import Footer from '../components/footer/footer'
@@ -12,16 +12,12 @@ export default props => {
   const siteDescription = get(props, 'data.site.siteMetadata.description')
 
   return (
-    <div style={{ margin: '-8px' }}>
-      <Helmet>
-        <meta charSet="utf-8" />
-        <title>{siteTitle}</title>
-        <meta name="description" content={siteDescription} />
-      </Helmet>
+    <React.Fragment>
+      <Header siteTitle={siteTitle} siteDescription={siteDescription} />
       <AppBar />
       <Content />
       <Footer />
-    </div>
+    </React.Fragment>
   )
 }
 
