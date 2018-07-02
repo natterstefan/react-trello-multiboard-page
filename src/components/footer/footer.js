@@ -1,8 +1,7 @@
 import React from 'react'
-import Typography from '@material-ui/core/Typography'
-import Link from 'gatsby-link'
-
+import { Link } from 'gatsby'
 import { withStyles } from '@material-ui/core/styles'
+import Typography from '@material-ui/core/Typography'
 
 // CSS inspired by https://codepen.io/natterstefan/pen/dKavRB (fork of
 // https://codepen.io/cbracco/pen/zekgx)
