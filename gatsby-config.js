@@ -9,13 +9,13 @@ module.exports = {
   pathPrefix: '/test',
   plugins: [
     'gatsby-plugin-react-helmet',
-    {
-      resolve: `gatsby-plugin-google-tagmanager`,
-      options: {
-        id: 'YOUR_GOOGLE_TAGMANAGER_ID',
-        includeInDevelopment: true
-      }
-    },
+    // {
+    //   resolve: `gatsby-plugin-google-tagmanager`,
+    //   options: {
+    //     id: 'YOUR_GOOGLE_TAGMANAGER_ID',
+    //     includeInDevelopment: true
+    //   }
+    // },
     {
       resolve: 'gatsby-source-filesystem',
       options: {
