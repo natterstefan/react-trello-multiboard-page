@@ -3,6 +3,9 @@ import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
 import get from 'lodash.get'
 
+// fix material-ui, based on https://github.com/mui-org/material-ui/tree/master/examples/gatsby
+import withRoot from '../withRoot'
+
 import { withStyles } from '@material-ui/core/styles'
 import Paper from '@material-ui/core/Paper'
 import Typography from '@material-ui/core/Typography'
@@ -49,7 +52,7 @@ function Template({
   const siteDescription = get(site, 'siteMetadata.description')
 
   return (
-    <React.Fragment>
+    <div>
       <Header siteTitle={siteTitle} siteDescription={siteDescription} />
       <AppBar />
       <div className={classes.page}>
@@ -70,7 +73,7 @@ function Template({
         </Paper>
       </div>
       <Footer />
-    </React.Fragment>
+    </div>
   )
 }
 
@@ -78,7 +81,7 @@ Template.propTypes = {
   classes: PropTypes.object.isRequired
 }
 
-export default withStyles(styles)(Template)
+export default withRoot(withStyles(styles)(Template))
 
 export const pageQuery = graphql`
   query PageByPath($slug: String!) {

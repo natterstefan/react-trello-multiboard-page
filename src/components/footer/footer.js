@@ -3,6 +3,9 @@ import { Link } from 'gatsby'
 import { withStyles } from '@material-ui/core/styles'
 import Typography from '@material-ui/core/Typography'
 
+// fix material-ui, based on https://github.com/mui-org/material-ui/tree/master/examples/gatsby
+import withRoot from '../../withRoot'
+
 // CSS inspired by https://codepen.io/natterstefan/pen/dKavRB (fork of
 // https://codepen.io/cbracco/pen/zekgx)
 const styles = () => ({
@@ -51,4 +54,4 @@ const Footer = ({ classes }) => {
 }
 Footer.displayName = 'Footer'
 
-export default withStyles(styles)(Footer)
+export default withRoot(withStyles(styles)(Footer))

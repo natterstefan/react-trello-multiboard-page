@@ -6,6 +6,9 @@ import AppBar from '@material-ui/core/AppBar'
 import Toolbar from '@material-ui/core/Toolbar'
 import Typography from '@material-ui/core/Typography'
 
+// fix material-ui, based on https://github.com/mui-org/material-ui/tree/master/examples/gatsby
+import withRoot from '../../withRoot'
+
 const styles = {
   root: {
     flexGrow: 1,
@@ -44,4 +47,4 @@ ButtonAppBar.propTypes = {
   classes: PropTypes.object.isRequired
 }
 
-export default withStyles(styles)(ButtonAppBar)
+export default withRoot(withStyles(styles)(ButtonAppBar))

@@ -6,22 +6,25 @@ import GridListTile from '@material-ui/core/GridListTile'
 import GridListTileBar from '@material-ui/core/GridListTileBar'
 import cardData from './data'
 
+// fix material-ui, based on https://github.com/mui-org/material-ui/tree/master/examples/gatsby
+import withRoot from '../../withRoot'
+
 const styles = theme => ({
   page: {
     margin: '30px 5px 0',
     backgroundColor: theme.palette.background.paper,
-    paddingBottom: 100,
+    paddingBottom: 100
   },
   grid: {
     display: 'flex',
     flexWrap: 'wrap',
     justifyContent: 'space-around',
-    overflow: 'hidden',
+    overflow: 'hidden'
   },
   gridList: {
     cursor: 'pointer',
     width: 500,
-    height: 'auto',
+    height: 'auto'
   },
   titleBar: {
     background:
@@ -82,4 +85,4 @@ AdvancedGridList.propTypes = {
   classes: PropTypes.object.isRequired
 }
 
-export default withStyles(styles)(AdvancedGridList)
+export default withRoot(withStyles(styles)(AdvancedGridList))

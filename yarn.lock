@@ -4157,7 +4157,7 @@ gatsby-transformer-remark@1.7.44:
     unist-util-select "^1.5.0"
     unist-util-visit "^1.1.1"
 
-gatsby@next:
+gatsby@2.0.0-beta.16:
   version "2.0.0-beta.16"
   resolved "https://registry.yarnpkg.com/gatsby/-/gatsby-2.0.0-beta.16.tgz#3412e7cd416827a3f69ef4cebd4094f8b34bf282"
   dependencies:
@@ -5576,7 +5576,7 @@ jss-vendor-prefixer@^7.0.0:
   dependencies:
     css-vendor "^0.3.8"
 
-jss@^9.3.3, jss@^9.7.0:
+jss@9.8.7, jss@^9.3.3, jss@^9.7.0:
   version "9.8.7"
   resolved "https://registry.yarnpkg.com/jss/-/jss-9.8.7.tgz#ed9763fc0f2f0260fc8260dac657af61e622ce05"
   dependencies:
@@ -7424,9 +7424,9 @@ react-dev-utils@^4.2.1:
     strip-ansi "3.0.1"
     text-table "0.2.0"
 
-react-dom@16.3.2:
-  version "16.3.2"
-  resolved "https://registry.yarnpkg.com/react-dom/-/react-dom-16.3.2.tgz#cb90f107e09536d683d84ed5d4888e9640e0e4df"
+react-dom@16.4.1:
+  version "16.4.1"
+  resolved "https://registry.yarnpkg.com/react-dom/-/react-dom-16.4.1.tgz#7f8b0223b3a5fbe205116c56deb85de32685dad6"
   dependencies:
     fbjs "^0.8.16"
     loose-envify "^1.1.0"
@@ -7465,7 +7465,7 @@ react-hot-loader@^4.1.0:
     react-lifecycles-compat "^3.0.4"
     shallowequal "^1.0.2"
 
-react-jss@^8.1.0:
+react-jss@8.6.0, react-jss@^8.1.0:
   version "8.6.0"
   resolved "https://registry.yarnpkg.com/react-jss/-/react-jss-8.6.0.tgz#6d2a1a5ebaa45afa6a71cc504c53a26dd2ac8447"
   dependencies:

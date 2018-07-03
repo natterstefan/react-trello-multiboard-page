@@ -1,11 +1,10 @@
 import React from 'react'
+import { Link } from 'gatsby'
 import Helmet from 'react-helmet'
 import CookieBanner from 'react-cookie-banner'
-import { Link } from 'gatsby'
-import Typography from '@material-ui/core/Typography'
 
 export default ({ siteTitle, siteDescription }) => (
-  <React.Fragment>
+  <div>
     <CookieBanner
       className="cookie-banner"
       cookiePath="/"
@@ -13,13 +12,7 @@ export default ({ siteTitle, siteDescription }) => (
       dismissOnScroll={false}
       disableStyle
       buttonMessage="OK"
-      link={
-        <Link to="/privacy">
-          <Typography color="inherit" style={{ display: 'inline' }}>
-            here.
-          </Typography>
-        </Link>
-      }
+      link={<Link to="/privacy">here.</Link>}
       message="We use cookies to give you the best online experience. See what we do and how you can disagree "
     />
     <Helmet>
@@ -82,5 +75,5 @@ export default ({ siteTitle, siteDescription }) => (
         }
      `}</style>
     </Helmet>
-  </React.Fragment>
+  </div>
 )

@@ -7,17 +7,20 @@ import AppBar from '../components/app-bar/app-bar'
 import Content from '../components/content/content'
 import Footer from '../components/footer/footer'
 
-export default props => {
+// fix material-ui, based on https://github.com/mui-org/material-ui/tree/master/examples/gatsby
+import withRoot from '../withRoot'
+
+const Index = props => {
   const siteTitle = get(props, 'data.site.siteMetadata.title')
   const siteDescription = get(props, 'data.site.siteMetadata.description')
 
   return (
-    <React.Fragment>
+    <div>
       <Header siteTitle={siteTitle} siteDescription={siteDescription} />
       <AppBar />
       <Content />
       <Footer />
-    </React.Fragment>
+    </div>
   )
 }
 
@@ -31,3 +34,5 @@ export const pageQuery = graphql`
     }
   }
 `
+
+export default withRoot(Index)
