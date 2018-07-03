@@ -1,9 +1,8 @@
 import React from 'react'
 import Helmet from 'react-helmet'
 import CookieBanner from 'react-cookie-banner'
-
+import { Link } from 'gatsby'
 import Typography from '@material-ui/core/Typography'
-import Link from 'gatsby-link'
 
 export default ({ siteTitle, siteDescription }) => (
   <React.Fragment>
