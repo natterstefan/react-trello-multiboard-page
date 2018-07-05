@@ -132,4 +132,4 @@ Stefan Natter @Twitter: https://twitter.com/natterstefan
 Multiboardfortrello.com will inform the user every time changes and/or
 alterations are made to the data privacy statement on this page.
 
-Most recent updating of the data privacy statement: 2018-07-01.
+Most recent updating of the data privacy statement: 2018-07-05.
