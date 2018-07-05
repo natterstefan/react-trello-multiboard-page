@@ -1,7 +1,7 @@
-import React from 'react'
-import { renderToString } from 'react-dom/server'
-import { JssProvider } from 'react-jss'
-import getPageContext from './src/getPageContext'
+const React = require('react')
+const { renderToString } = require('react-dom/server')
+const { JssProvider } = require('react-jss')
+const { getPageContext } = require('./src/getPageContext')
 
 exports.replaceRenderer = ({
   bodyComponent,
