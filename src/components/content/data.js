@@ -5,20 +5,20 @@ const cardData = [
     title: 'Source: GitHub',
     link: 'https://github.com/natterstefan/react-trello-multiboard',
     cols: 2,
-    featured: true
+    featured: true,
   },
   {
     img:
       'https://res.cloudinary.com/dgqdvqyz3/image/upload/v1530115668/react-trello-multiboard/oWswTtR4_400x400_1_m6wtld.jpg',
     title: 'Author: natterstefan',
-    link: 'https://twitter.com/natterstefan'
+    link: 'https://twitter.com/natterstefan',
   },
   {
     img:
       'https://res.cloudinary.com/dgqdvqyz3/image/upload/v1530115666/react-trello-multiboard/trello_multiboard_example_u6in6u.gif',
     title: 'Example',
-    link: 'https://multiboardfortrello.com/example'
-  }
+    link: 'https://multiboardfortrello.com/example',
+  },
 ]
 
 export default cardData

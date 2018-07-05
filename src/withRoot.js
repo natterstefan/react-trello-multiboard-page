@@ -2,14 +2,12 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { MuiThemeProvider } from '@material-ui/core/styles'
 import CssBaseline from '@material-ui/core/CssBaseline'
-import getPageContext from './getPageContext'
+import getPageContext from './getPageContext' // eslint-disable-line
 
-import style from './styles/styles.scss'
+import style from './styles/styles.scss' // eslint-disable-line
 
 function withRoot(Component) {
   class WithRoot extends React.Component {
-    pageContext = null
-
     constructor(props) {
       super(props)
 
@@ -26,11 +24,13 @@ function withRoot(Component) {
       //
       // TODO
       // - once this is fixed, we remove the comments and make it work again
-      const jssStyles = document.querySelector('#server-side-jss')
+      // const jssStyles = document.querySelector('#server-side-jss')
       // if (jssStyles && jssStyles.parentNode) {
       //   jssStyles.parentNode.removeChild(jssStyles)
       // }
     }
+
+    pageContext = null
 
     render() {
       // MuiThemeProvider makes the theme available down the React tree thanks
@@ -50,7 +50,7 @@ function withRoot(Component) {
   }
 
   WithRoot.propTypes = {
-    pageContext: PropTypes.object
+    pageContext: PropTypes.object // eslint-disable-line
   }
 
   return WithRoot

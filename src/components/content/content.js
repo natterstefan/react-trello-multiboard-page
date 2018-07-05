@@ -13,39 +13,39 @@ const styles = theme => ({
   page: {
     margin: '30px 5px 0',
     backgroundColor: theme.palette.background.paper,
-    paddingBottom: 100
+    paddingBottom: 100,
   },
   grid: {
     display: 'flex',
     flexWrap: 'wrap',
     justifyContent: 'space-around',
-    overflow: 'hidden'
+    overflow: 'hidden',
   },
   gridList: {
     cursor: 'pointer',
     width: 500,
-    height: 'auto'
+    height: 'auto',
   },
   titleBar: {
     background:
       'linear-gradient(to bottom, rgba(0,0,0,0.7) 0%, ' +
-      'rgba(0,0,0,0.3) 70%, rgba(0,0,0,0) 100%)'
+      'rgba(0,0,0,0.3) 70%, rgba(0,0,0,0) 100%)',
   },
   icon: {
-    color: 'white'
+    color: 'white',
   },
   imgX: {
     transition: '0.6s ease',
     '&:hover': {
-      transform: 'translateX(-50%) scale(1.3)'
-    }
+      transform: 'translateX(-50%) scale(1.3)',
+    },
   },
   imgY: {
     transition: '0.6s ease',
     '&:hover': {
-      transform: 'translateY(-50%) scale(1.3)'
-    }
-  }
+      transform: 'translateY(-50%) scale(1.3)',
+    },
+  },
 })
 
 function AdvancedGridList(props) {
@@ -60,7 +60,9 @@ function AdvancedGridList(props) {
               key={tile.img}
               cols={tile.featured ? 2 : 1}
               rows={tile.featured ? 2 : 1}
-              onClick={() => (window.location = tile.link)}
+              onClick={() => {
+                window.location = tile.link
+              }}
             >
               <img
                 className={(idx + 1) % 2 === 0 ? classes.imgY : classes.imgX}
@@ -82,7 +84,7 @@ function AdvancedGridList(props) {
 }
 
 AdvancedGridList.propTypes = {
-  classes: PropTypes.object.isRequired
+  classes: PropTypes.object.isRequired, // eslint-disable-line
 }
 
 export default withRoot(withStyles(styles)(AdvancedGridList))
