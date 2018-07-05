@@ -3,15 +3,14 @@
 Basic static website for https://github.com/natterstefan/react-trello-multiboard
 built with [Gatsby](https://www.gatsbyjs.org/).
 
-## Running in development
+## Running in development mode
 
-`gatsby develop`
+`npm run develop`
 
 ## Build for deployment
 
-`yarn build` or `gatsby build`
+`npm run build`
 
-### SCSS
+## Test production build locally
 
-Currently not in use but one could simply add `import styles from './styles.scss'`
-and start using scss files for styling.
+`npm run serve`
