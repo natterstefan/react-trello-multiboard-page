@@ -56,8 +56,10 @@ typings/
 
 # dotenv environment variables file
 .env
+config.js
 
 .cache/
 public
 yarn-error.log
 .DS_Store
+tmp
