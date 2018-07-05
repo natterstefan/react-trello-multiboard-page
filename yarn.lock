@@ -4172,6 +4172,12 @@ gatsby-link@^2.0.0-beta.3:
     react-lifecycles-compat "^3.0.2"
     ric "^1.3.0"
 
+gatsby-plugin-google-analytics@1.0.31:
+  version "1.0.31"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-google-analytics/-/gatsby-plugin-google-analytics-1.0.31.tgz#eaf16e1809461b10badf12c05038c429745783c0"
+  dependencies:
+    babel-runtime "^6.26.0"
+
 gatsby-plugin-google-tagmanager@1.0.19:
   version "1.0.19"
   resolved "https://registry.yarnpkg.com/gatsby-plugin-google-tagmanager/-/gatsby-plugin-google-tagmanager-1.0.19.tgz#5cd048aabc5720a66a24446aa69bd09f151e8eb1"

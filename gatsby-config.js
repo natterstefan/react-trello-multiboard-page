@@ -1,3 +1,5 @@
+const config = require('./config')
+
 module.exports = {
   siteMetadata: {
     title: 'React-Trello-Multiboard',
@@ -17,11 +19,20 @@ module.exports = {
         name: 'markdown-pages'
       }
     },
-    'gatsby-transformer-remark'
+    'gatsby-transformer-remark',
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: config.googleAnalytics,
+        head: false,
+        anonymize: true,
+        respectDNT: true
+      }
+    }
     // {
     //   resolve: `gatsby-plugin-google-tagmanager`,
     //   options: {
-    //     id: 'YOUR_GOOGLE_TAGMANAGER_ID',
+    //     id: config.googleTagManagerId,
     //     includeInDevelopment: true
     //   }
     // }

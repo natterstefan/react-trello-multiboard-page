@@ -118,6 +118,8 @@ Furthermore you can prevent Google’s collection and use of data
 (cookies and IP address) by downloading and installing the browser
 plug-in available under [https://tools.google.com/dlpage/gaoptout?hl=en](https://tools.google.com/dlpage/gaoptout?hl=en).
 
+Or you deactivate it with a DoNotTrack Cookie: <a href="javascript:gaOptout();">Deactive Google Analytics</a>.
+
 ## How can you contact Multiboardfortrello.com regarding data protection?
 
 The user can address questions, suggestions or requests concerning data
