@@ -1,4 +1,4 @@
-# react-trello-multiboard-page
+# React-Trello-Multiboard-Page
 
 Basic static website for https://github.com/natterstefan/react-trello-multiboard
 built with [Gatsby](https://www.gatsbyjs.org/).
@@ -10,3 +10,8 @@ built with [Gatsby](https://www.gatsbyjs.org/).
 ## Build for deployment
 
 `yarn build` or `gatsby build`
+
+### SCSS
+
+Currently not in use but one could simply add `import styles from './styles.scss'`
+and start using scss files for styling.

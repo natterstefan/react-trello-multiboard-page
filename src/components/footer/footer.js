@@ -3,7 +3,8 @@ import { Link } from 'gatsby'
 import { withStyles } from '@material-ui/core/styles'
 import Typography from '@material-ui/core/Typography'
 
-// fix material-ui, based on https://github.com/mui-org/material-ui/tree/master/examples/gatsby
+// fix material-ui, based on
+// https://github.com/mui-org/material-ui/tree/master/examples/gatsby
 import withRoot from '../../withRoot'
 
 // CSS inspired by https://codepen.io/natterstefan/pen/dKavRB (fork of
