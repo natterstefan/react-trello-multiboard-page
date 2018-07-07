@@ -1,3 +1,4 @@
+/* eslint-disable react/no-danger */
 // Guide: https://material-ui.com/guides/server-rendering/
 // NOTE
 // - use require, imports do not work properly
@@ -7,11 +8,7 @@ const { renderToString } = require('react-dom/server')
 const { JssProvider } = require('react-jss')
 const { getPageContext } = require('./src/getPageContext')
 
-exports.replaceRenderer = ({
-  bodyComponent,
-  replaceBodyHTMLString,
-  setHeadComponents
-}) => {
+exports.replaceRenderer = ({ bodyComponent, replaceBodyHTMLString, setHeadComponents }) => {
   // Get the context of the page to collected side effects.
   const pageContext = getPageContext()
 
@@ -21,9 +18,9 @@ exports.replaceRenderer = ({
       generateClassName={pageContext.generateClassName}
     >
       {React.cloneElement(bodyComponent, {
-        pageContext
+        pageContext,
       })}
-    </JssProvider>
+    </JssProvider>,
   )
 
   replaceBodyHTMLString(bodyHTML)
@@ -33,8 +30,8 @@ exports.replaceRenderer = ({
       id="server-side-jss"
       key="server-side-jss"
       dangerouslySetInnerHTML={{
-        __html: pageContext.sheetsRegistry.toString()
+        __html: pageContext.sheetsRegistry.toString(),
       }}
-    />
+    />,
   ])
 }

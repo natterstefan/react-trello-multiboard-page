@@ -1,3 +1,4 @@
+// based on https://github.com/mui-org/material-ui/blob/master/examples/gatsby/src/withRoot.js
 import React from 'react'
 import PropTypes from 'prop-types'
 import { MuiThemeProvider } from '@material-ui/core/styles'
@@ -50,7 +51,7 @@ function withRoot(Component) {
   }
 
   WithRoot.propTypes = {
-    pageContext: PropTypes.object // eslint-disable-line
+    pageContext: PropTypes.object, // eslint-disable-line
   }
 
   return WithRoot

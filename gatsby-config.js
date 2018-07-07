@@ -6,7 +6,7 @@ module.exports = {
     author: 'Stefan Natter',
     description:
       'React-Trello-Multiboard is a single-page application built with React displaying multiple cards of several Trello® boards and lists. The cards can be filtered by preferred team members. ',
-    siteUrl: 'https://multiboardfortrello.com'
+    siteUrl: 'https://multiboardfortrello.com',
   },
   pathPrefix: '/test',
   plugins: [
@@ -16,8 +16,8 @@ module.exports = {
       resolve: 'gatsby-source-filesystem',
       options: {
         path: `${__dirname}/src/content`,
-        name: 'markdown-pages'
-      }
+        name: 'markdown-pages',
+      },
     },
     'gatsby-transformer-remark',
     {
@@ -26,9 +26,9 @@ module.exports = {
         trackingId: config.googleAnalytics,
         head: false,
         anonymize: true,
-        respectDNT: true
-      }
-    }
+        respectDNT: true,
+      },
+    },
     // {
     //   resolve: `gatsby-plugin-google-tagmanager`,
     //   options: {
@@ -36,5 +36,5 @@ module.exports = {
     //     includeInDevelopment: true
     //   }
     // }
-  ]
+  ],
 }
