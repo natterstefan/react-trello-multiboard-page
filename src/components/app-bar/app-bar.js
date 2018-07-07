@@ -14,12 +14,12 @@ const styles = {
     flexGrow: 1,
     '& a': {
       textDecoration: 'none',
-      color: '#fff'
-    }
+      color: '#fff',
+    },
   },
   flex: {
-    flex: 1
-  }
+    flex: 1,
+  },
 }
 
 function ButtonAppBar(props) {
@@ -29,11 +29,7 @@ function ButtonAppBar(props) {
       <AppBar position="static">
         <Toolbar>
           <Link to="/">
-            <Typography
-              variant="title"
-              color="inherit"
-              className={classes.flex}
-            >
+            <Typography variant="title" color="inherit" className={classes.flex}>
               Multiboard for Trello®
             </Typography>
           </Link>
@@ -44,7 +40,7 @@ function ButtonAppBar(props) {
 }
 
 ButtonAppBar.propTypes = {
-  classes: PropTypes.object.isRequired
+  classes: PropTypes.object.isRequired, // eslint-disable-line
 }
 
 export default withRoot(withStyles(styles)(ButtonAppBar))
