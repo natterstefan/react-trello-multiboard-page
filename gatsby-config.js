@@ -1,5 +1,3 @@
-const config = require('./config')
-
 module.exports = {
   siteMetadata: {
     title: 'React-Trello-Multiboard',
