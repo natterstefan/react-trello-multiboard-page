@@ -1,6 +1,5 @@
 /* eslint-disable react/no-danger */
 import React from 'react'
-import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
 import get from 'lodash.get'
 
@@ -69,11 +68,6 @@ function Template({
       <Footer />
     </div>
   )
-}
-
-Template.propTypes = {
-  classes: PropTypes.object.isRequired, // eslint-disable-line
-  data: PropTypes.object.isRequired // eslint-disable-line
 }
 
 export default withRoot(withStyles(styles)(Template))

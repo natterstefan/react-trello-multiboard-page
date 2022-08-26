@@ -1,5 +1,4 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 import { Link } from 'gatsby'
 import Helmet from 'react-helmet'
 import CookieBanner from 'react-cookie-banner'
@@ -25,9 +24,5 @@ const Header = ({ siteTitle, siteDescription }) => (
 )
 
 Header.displayName = 'Header'
-Header.propTypes = {
-  siteTitle: PropTypes.string.isRequired,
-  siteDescription: PropTypes.string.isRequired,
-}
 
 export default Header

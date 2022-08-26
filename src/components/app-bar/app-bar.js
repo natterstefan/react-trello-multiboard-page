@@ -1,5 +1,4 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 import { Link } from 'gatsby'
 import { withStyles } from '@material-ui/core/styles'
 import AppBar from '@material-ui/core/AppBar'
@@ -18,6 +17,7 @@ const styles = {
     },
   },
   flex: {
+    fontSize: '1.3125rem',
     flex: 1,
   },
 }
@@ -29,7 +29,7 @@ function ButtonAppBar(props) {
       <AppBar position="static">
         <Toolbar>
           <Link to="/">
-            <Typography variant="title" color="inherit" className={classes.flex}>
+            <Typography variant="h1" color="inherit" className={classes.flex}>
               Multiboard for Trello®
             </Typography>
           </Link>
@@ -37,10 +37,6 @@ function ButtonAppBar(props) {
       </AppBar>
     </div>
   )
-}
-
-ButtonAppBar.propTypes = {
-  classes: PropTypes.object.isRequired, // eslint-disable-line
 }
 
 export default withRoot(withStyles(styles)(ButtonAppBar))
