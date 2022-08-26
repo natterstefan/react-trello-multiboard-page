@@ -11,6 +11,7 @@
     "develop": "gatsby develop",
     "build": "gatsby build",
     "lint": "eslint ./src",
+    "preserve": "gatsby build",
     "serve": "gatsby serve"
   },
   "devDependencies": {
