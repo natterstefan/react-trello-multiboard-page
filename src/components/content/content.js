@@ -1,9 +1,8 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 import { withStyles } from '@material-ui/core/styles'
-import GridList from '@material-ui/core/GridList'
-import GridListTile from '@material-ui/core/GridListTile'
-import GridListTileBar from '@material-ui/core/GridListTileBar'
+import ImageList from '@material-ui/core/ImageList'
+import ImageListTile from '@material-ui/core/ImageListItem'
+import ImageListItemBar from '@material-ui/core/ImageListItemBar'
 import cardData from './data'
 
 // fix material-ui, based on https://github.com/mui-org/material-ui/tree/master/examples/gatsby
@@ -54,9 +53,9 @@ function AdvancedGridList(props) {
   return (
     <div className={classes.page}>
       <div className={classes.grid}>
-        <GridList cellHeight={200} spacing={1} className={classes.gridList}>
+        <ImageList rowHeight={200} gap={1} className={classes.gridList}>
           {cardData.map((tile, idx) => (
-            <GridListTile
+            <ImageListTile
               key={tile.img}
               cols={tile.featured ? 2 : 1}
               rows={tile.featured ? 2 : 1}
@@ -69,22 +68,18 @@ function AdvancedGridList(props) {
                 src={tile.img}
                 alt={idx}
               />
-              <GridListTileBar
+              <ImageListItemBar
                 title={tile.title}
-                titlePosition="top"
+                position="top"
                 actionPosition="left"
                 className={classes.titleBar}
               />
-            </GridListTile>
+            </ImageListTile>
           ))}
-        </GridList>
+        </ImageList>
       </div>
     </div>
   )
-}
-
-AdvancedGridList.propTypes = {
-  classes: PropTypes.object.isRequired, // eslint-disable-line
 }
 
 export default withRoot(withStyles(styles)(AdvancedGridList))

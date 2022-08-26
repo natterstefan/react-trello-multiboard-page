@@ -1,5 +1,4 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 import { Link } from 'gatsby'
 import { withStyles } from '@material-ui/core/styles'
 import Typography from '@material-ui/core/Typography'
@@ -54,8 +53,5 @@ const Footer = ({ classes }) => (
 )
 
 Footer.displayName = 'Footer'
-Footer.propTypes = {
-  classes: PropTypes.object.isRequired, // eslint-disable-line
-}
 
 export default withRoot(withStyles(styles)(Footer))

@@ -1,5 +1,5 @@
 module.exports = {
-  extends: '@natterstefan/eslint-config-ns',
+  extends: 'eslint-config-ns',
   globals: {
     exports: true,
     __dirname: true,
