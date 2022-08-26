@@ -1,6 +1,13 @@
 name: Node CI
 
 on:
+  # Allow to trigger the workflow manually again via the GitHub UI
+  # @see https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows#workflow_call
+  workflow_call:
+  # Allow to trigger the workflow manually via the GitHub UI and also allow to
+  # select a custom branch
+  # @see https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows#workflow_dispatch
+  workflow_dispatch:
   pull_request:
   push:
     branches:
