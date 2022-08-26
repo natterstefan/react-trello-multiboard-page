@@ -6,10 +6,6 @@ import ImageListItemBar from '@material-ui/core/ImageListItemBar'
 
 import withRoot from '../../withRoot'
 
-import cardData from './data'
-
-// fix material-ui, based on https://github.com/mui-org/material-ui/tree/master/examples/gatsby
-
 const styles = theme => ({
   page: {
     margin: '30px 5px 0',
@@ -49,6 +45,26 @@ const styles = theme => ({
   },
 })
 
+const cardData = [
+  {
+    img: '/images/Screen_Shot_on_2018-06-27_at_17_3A52_3A06_e9pdue.png',
+    title: 'Source: GitHub',
+    link: 'https://github.com/natterstefan/react-trello-multiboard',
+    cols: 2,
+    featured: true,
+  },
+  {
+    img: '/images/oWswTtR4_400x400_1_m6wtld.jpeg',
+    title: 'Author: natterstefan',
+    link: 'https://twitter.com/natterstefan',
+  },
+  {
+    img: '/images/trello_multiboard_example_u6in6u.gif',
+    title: 'Example',
+    link: 'https://multiboardfortrello.com/example',
+  },
+]
+
 function AdvancedGridList(props) {
   const { classes } = props
 
@@ -62,13 +78,13 @@ function AdvancedGridList(props) {
               cols={tile.featured ? 2 : 1}
               rows={tile.featured ? 2 : 1}
               onClick={() => {
-                window.location = tile.link
+                window.location.href = tile.link
               }}
             >
               <img
                 className={(idx + 1) % 2 === 0 ? classes.imgY : classes.imgX}
                 src={tile.img}
-                alt={idx}
+                alt={tile.title}
               />
               <ImageListItemBar
                 title={tile.title}
