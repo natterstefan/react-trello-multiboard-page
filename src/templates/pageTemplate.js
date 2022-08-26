@@ -2,14 +2,12 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 import get from 'lodash.get'
-
 import { withStyles } from '@material-ui/core/styles'
 import Paper from '@material-ui/core/Paper'
 import Typography from '@material-ui/core/Typography'
 
 // fix material-ui, based on https://github.com/mui-org/material-ui/tree/master/examples/gatsby
 import withRoot from '../withRoot'
-
 import Header from '../components/header/header'
 import AppBar from '../components/app-bar/app-bar'
 import Footer from '../components/footer/footer'
@@ -57,11 +55,18 @@ function Template({
       <AppBar />
       <div className={classes.page}>
         <Paper className={classes.root} elevation={1}>
-          <Typography variant="headline" component="h1" className={classes.title}>
+          <Typography
+            variant="headline"
+            component="h1"
+            className={classes.title}
+          >
             {frontmatter.title}
           </Typography>
           <div className={classes['page-content-wrapper']}>
-            <div className="page-content" dangerouslySetInnerHTML={{ __html: html }} />
+            <div
+              className="page-content"
+              dangerouslySetInnerHTML={{ __html: html }}
+            />
           </div>
         </Paper>
       </div>

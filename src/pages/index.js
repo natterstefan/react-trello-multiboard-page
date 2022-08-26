@@ -6,7 +6,6 @@ import Header from '../components/header/header'
 import AppBar from '../components/app-bar/app-bar'
 import Content from '../components/content/content'
 import Footer from '../components/footer/footer'
-
 // fix material-ui, based on https://github.com/mui-org/material-ui/tree/master/examples/gatsby
 import withRoot from '../withRoot'
 

@@ -3,10 +3,12 @@ import { withStyles } from '@material-ui/core/styles'
 import ImageList from '@material-ui/core/ImageList'
 import ImageListTile from '@material-ui/core/ImageListItem'
 import ImageListItemBar from '@material-ui/core/ImageListItemBar'
+
+import withRoot from '../../withRoot'
+
 import cardData from './data'
 
 // fix material-ui, based on https://github.com/mui-org/material-ui/tree/master/examples/gatsby
-import withRoot from '../../withRoot'
 
 const styles = theme => ({
   page: {

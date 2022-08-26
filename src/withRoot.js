@@ -2,6 +2,7 @@
 import React from 'react'
 import { MuiThemeProvider } from '@material-ui/core/styles'
 import CssBaseline from '@material-ui/core/CssBaseline'
+
 import getPageContext from './getPageContext' // eslint-disable-line
 
 import style from './styles/styles.scss' // eslint-disable-line
@@ -34,9 +35,7 @@ function withRoot(Component) {
       // MuiThemeProvider makes the theme available down the React tree thanks
       // to React Context.
       return (
-        <MuiThemeProvider
-          theme={this.pageContext.theme}
-        >
+        <MuiThemeProvider theme={this.pageContext.theme}>
           {/* CssBaseline kickstart an elegant, consistent, and simple baseline
             to build upon. */}
           <CssBaseline />

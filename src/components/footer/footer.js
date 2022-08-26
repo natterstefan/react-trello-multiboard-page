@@ -45,8 +45,8 @@ const Footer = ({ classes }) => (
     </div>
     <div>
       <Typography color="inherit" className={classes.body1}>
-        We are not affiliated, associated, authorized, endorsed by or in any way officially
-        connected to Trello®, Inc. (www.trello.com).
+        We are not affiliated, associated, authorized, endorsed by or in any way
+        officially connected to Trello®, Inc. (www.trello.com).
       </Typography>
     </div>
   </div>

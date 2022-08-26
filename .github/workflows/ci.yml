@@ -1,0 +1,35 @@
+name: Node CI
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+  # Runs "At 05:00 on Monday." (see https://crontab.guru/#0_5_*_*_1)
+  # @see https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows#schedule
+  schedule:
+    - cron: "0 5 * * 1"
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v3
+
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 16
+          cache: "yarn"
+
+      - uses: bahmutov/npm-install@4f2c2de39846f27e0034cb0f2485a8212ed1edfa
+        with:
+          install-command:
+            yarn --prefer-offline --frozen-lockfile --no-progress --silent
+      
+      - run: yarn lint
+      - run: yarn build
